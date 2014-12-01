@@ -258,13 +258,21 @@ If you have a Spark Core that you have already claimed, but you need to change t
 
 You need to know your Spark Core's Core ID, or possibly Name to interact with it.  There are a number of ways that you can do this:
 
-1. You can use the Spark-cli `spark identify` ([docs](http://docs.spark.io/cli/#running-from-source-advanced-spark-identify)) command to identify a spark that is connected to the computer and that is in **"[Listening Mode](http://docs.spark.io/connect/#connecting-your-core-listening-mode)"**
-
-1. You can connect a terminal program (like [PuTTY](http://www.chiark.greenend.org.uk/~sgtatham/putty/)) to your Spark Core that is **[Listening Mode](http://docs.spark.io/connect/#connecting-your-core-listening-mode)**, and using the **"i"** command to identify the Spark Core.
-
-1. The easiest way though is to login to [Spark Build](http://spark.io/build) with the account that claimed the Spark Core you wish to identify.  Then along the left hand side, click the Core's button and finally click the arrow next to your Spark Core's name to reveal it's Core ID:
+1. The easiest way to identify your Spark Core is to login to [Spark Build](http://spark.io/build) with the account that claimed the Spark Core you wish to identify.  Then along the left hand side, click the Core's button and finally click the arrow next to your Spark Core's name to reveal it's Core ID:
 
 	![06010-IdentifySparkCore](images/06010-identifysparkcore.png?raw=true "Identify Spark Core")
+
+1. You often also need to know the Access Token for your Spark Account.  The Access Toekn is needed if you will be accessing the Spark Core via REST calls.  To get your Access Token, login to [Spark Build](http://spark.io/build), then click the **"Settings"** icon in the lower left corner.  From there you can view and copy your Access Token:
+
+	![06020-AccessToken](images/06020-accesstoken.png?raw=true "Access Token")
+
+1. Another handy method is to use the Spark-cli `spark list` ([docs](http://docs.spark.io/cli/#running-from-source-advanced-spark-list)) command to list all the Spark Cores claimed by your account, whether or not they are online, and to get each Spark Core's name and Core ID:
+
+	![06030-SparkList](images/06030-sparklist.png?raw=true "Spark List")
+
+1. You can also use the Spark-cli `spark identify` ([docs](http://docs.spark.io/cli/#running-from-source-advanced-spark-identify)) command to identify a spark that is connected to the computer and that is in **"[Listening Mode](http://docs.spark.io/connect/#connecting-your-core-listening-mode)"**
+
+1. Lastly, you can connect a terminal program (like [PuTTY](http://www.chiark.greenend.org.uk/~sgtatham/putty/)) to your Spark Core that is **[Listening Mode](http://docs.spark.io/connect/#connecting-your-core-listening-mode)**, and using the **"i"** command to identify the Spark Core.
 
 ---
 
