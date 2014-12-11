@@ -142,11 +142,6 @@ You can configure your Spark Core using a Node.js module that is provided by Spa
 
 	![02070-NodeJS07](images/02070-nodejs07.png?raw=true "Node.js Installation 07")
 
-1.  Once you have installed the Spark-CLI, you can verify it's version using:
-
-	`npm list -g spark-cli`
-
-	
 ---
 
 <a name="install-the-spark-cli" />
@@ -226,7 +221,7 @@ Now that you have a Spark account, you can "claim" your Spark Core.  Claiming a 
 
 1. Next, wait for your Spark Core to be **"[Shouting Rainbows](https://vine.co/v/hFdPKul226i)"**. when that happens, press `ENTER`
 
-1. Then, we prompted, enter a name for your Spark Core enter one (no spaces) and press `ENTER`.
+1. Then, when prompted, enter a name for your Spark Core (no spaces) and press `ENTER`.
 
 1. Finally, once your core has been named, you will be asked if you want to log out or not (your choice), and your Spark Core's name and ID will be displayed:
 
@@ -258,6 +253,13 @@ If you have a Spark Core that you have already claimed, but you need to change t
 
 You need to know your Spark Core's Core ID, or possibly Name to interact with it.  There are a number of ways that you can do this:
 
+- Use Spark Build to show you your Cores and their ID's, and your account's Access Token
+- Use the spark-cli's `spark list` command
+- Use the spark-cli's `spark identify` command
+- Or connect to the Spark Core over USB/Serial using a terminal program like PuTTY, and using the `i` command.
+
+We'll show you each of those methods below:
+
 1. The easiest way to identify your Spark Core is to login to [Spark Build](http://spark.io/build) with the account that claimed the Spark Core you wish to identify.  Then along the left hand side, click the Core's button and finally click the arrow next to your Spark Core's name to reveal it's Core ID:
 
 	![06010-IdentifySparkCore](images/06010-identifysparkcore.png?raw=true "Identify Spark Core")
@@ -272,7 +274,16 @@ You need to know your Spark Core's Core ID, or possibly Name to interact with it
 
 1. You can also use the Spark-cli `spark identify` ([docs](http://docs.spark.io/cli/#running-from-source-advanced-spark-identify)) command to identify a spark that is connected to the computer and that is in **"[Listening Mode](http://docs.spark.io/connect/#connecting-your-core-listening-mode)"**
 
-1. Lastly, you can connect a terminal program (like [PuTTY](http://www.chiark.greenend.org.uk/~sgtatham/putty/)) to your Spark Core that is **[Listening Mode](http://docs.spark.io/connect/#connecting-your-core-listening-mode)**, and using the **"i"** command to identify the Spark Core.
+	![06034-SparkIdentify](images/06034-sparkidentify.png?raw=true "Spark Identify")
+
+1. Lastly, you can connect a terminal program (like [PuTTY](http://www.chiark.greenend.org.uk/~sgtatham/putty/)) to your Spark Core that is **[Listening Mode](http://docs.spark.io/connect/#connecting-your-core-listening-mode)**, and using the **"i"** command to identify the Spark Core.  Use the COM Port that your Spark Core is listening on (you can find that in the Windows **"Device Manager"**, under **"Ports (COM & LPT)"**.  
+
+	![01170-SparkCOMPort](images/01170-sparkcomport.png?raw=true "Spark Core COM Port")
+
+	![06040-PuttyConnection](images/06040-puttyconnection.png?raw=true "PuTTY Connection")
+
+	
+	![06050-PuTTYCoreID](images/06050-puttycoreid.png?raw=true "PuTTY Core ID")
 
 ---
 
